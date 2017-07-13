@@ -1,0 +1,29 @@
+{
+  "name": "@mo/express-default-module",
+  "version": "0.1.0",
+  "description": "mo mvc express module default middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yskun",
+  "license": "MIT",
+  "dependencies": {
+    "@mo/core": "git+https://yskun@code.aliyun.com/mo/core.git#publish",
+    "@mo/express": "git+https://yskun@code.aliyun.com/mo/express.git#publish",
+    "@types/body-parser": "^1.16.4",
+    "@types/cookie-parser": "^1.3.30",
+    "@types/express-session": "^1.15.0",
+    "@types/morgan": "^1.7.32",
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.3",
+    "express-session": "^1.15.3",
+    "helmet": "^3.6.1",
+    "morgan": "^1.8.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.1",
+    "@types/node": "^8.0.11"
+  }
+}
