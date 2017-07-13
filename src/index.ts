@@ -9,7 +9,7 @@ import * as helmet from "helmet";
 import {SessionOptions} from "express-session";
 import {CorsOptions} from "cors";
 import {IHelmetConfiguration} from "helmet";
-
+import * as e from 'express';
 
 
 export class ExpressDefaultPluginPackage {
