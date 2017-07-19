@@ -39,6 +39,4 @@ module.exports = function (grunt) {
     grunt.registerTask("default", ["clean:default", "ts:default"]);
     grunt.registerTask("publish", ["clean:publish", "ts:publish","copy:publish"]);
 
-
-
 };
