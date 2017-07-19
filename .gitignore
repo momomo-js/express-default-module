@@ -8,3 +8,4 @@ node_modules
 !/Gruntfile.js
 .tscache
 out
+package-lock.json
