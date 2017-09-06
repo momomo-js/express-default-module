@@ -9,3 +9,5 @@ node_modules
 .tscache
 out
 package-lock.json
+
+.idea

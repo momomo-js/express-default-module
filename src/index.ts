@@ -9,11 +9,12 @@ import * as helmet from 'helmet';
 import {SessionOptions} from 'express-session';
 import {CorsOptions} from 'cors';
 import {IHelmetConfiguration} from 'helmet';
-import {Plugin, PluginPackage} from '@mo/core';
+import {Input, Plugin, PluginPackage} from '@mo/core';
 
 @PluginPackage(ExpressServer)
 export class ExpressDefaultPluginPackage {
 
+    @Input('session-option')
     sessionOption: SessionOptions = {
         secret: 'NEXTION_DEFAULT_SESSION',
         cookie: {
@@ -25,6 +26,7 @@ export class ExpressDefaultPluginPackage {
     };
     @Plugin(ExpressMiddleware)
     session = session(this.sessionOption);
+    @Input('cors-option')
     corsOption: CorsOptions = {};
     @Plugin(ExpressMiddleware)
     cors: Function = CORS(this.corsOption);

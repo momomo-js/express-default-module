@@ -11,8 +11,8 @@
   "author": "yskun",
   "license": "MIT",
   "dependencies": {
-    "@mo/core": "git+https://code.aliyun.com/mo/core.git#publish",
-    "@mo/express": "git+https://code.aliyun.com/mo/express.git#publish",
+    "@mo/core": "git+https://code.aliyun.com/mo/core.git#version/0.2.0",
+    "@mo/express": "git+https://code.aliyun.com/mo/express.git#version/0.2.0",
     "@types/express": "^4.0.36",
     "body-parser": "^1.17.2",
     "cookie-parser": "^1.4.3",

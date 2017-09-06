@@ -1,8 +1,9 @@
-import {Component, Controller, Instance, Method, Module, MoServer, Router, RouterManager} from '@mo/core';
+import {Component, Controller, Instance, Method, Module, MoServer, Option, Router, RouterManager} from '@mo/core';
 import {Injectable} from 'injection-js';
 import {ArrayType, Param, Query} from "@mo/express/src/decoration/parameter";
 import {Express, ExpressServer, GET, POST, ResponseHandler} from "@mo/express";
 import {ExpressDefaultPluginPackage} from "../src/index";
+import {CorsOptions} from "cors";
 
 
 class IndexModel {
@@ -108,9 +109,15 @@ class TestModule {
     }
 })
 class TestInstance {
+    @Option('cors-option')
+    cors: CorsOptions = {
+        origin: '123'
+    }
 }
 
-new MoServer(TestInstance).startSever().then();
+MoServer
+    .create(TestInstance)
+    .then(value => value.startSever());
 
 /**
  * Created by yskun on 2017/7/8.
