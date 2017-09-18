@@ -32,6 +32,10 @@ export class ExpressDefaultPluginPackage {
     @Plugin(ExpressMiddleware)
     cors: Function = CORS(this.corsOption);
 
+
+    @Plugin(ExpressMiddleware)
+    corsRouter: Function = e.Router().options('*',CORS());
+    
     @Plugin(ExpressMiddleware)
     helmet: Function = helmet(this.helmetOption);
 
