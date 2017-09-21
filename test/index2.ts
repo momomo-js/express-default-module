@@ -1,9 +1,8 @@
 import {Component, Controller, Instance, Method, Module, MoServer, Option, Router, RouterManager} from '@mo/core';
 import {Injectable} from 'injection-js';
-import {ArrayType, Param, Query} from "@mo/express/src/decoration/parameter";
-import {Express, ExpressServer, GET, POST, ResponseHandler} from "@mo/express";
-import {ExpressDefaultPluginPackage} from "../src/index";
-import {CorsOptions} from "cors";
+import {ArrayType, Express, ExpressServer, GET, Params, POST, Query, ResponseHandler} from '@mo/express';
+import {ExpressDefaultPluginPackage} from '../src/index';
+import {CorsOptions} from 'cors';
 
 
 class IndexModel {
@@ -16,7 +15,7 @@ class NewIndexModel {
     @ArrayType(Number)
     test: number[];
 
-    @Param
+    @Params
     ts: number;
 
     @Query
