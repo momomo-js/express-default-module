@@ -1,4 +1,4 @@
-import {Component, Controller, Instance, Method, Module, MoServer, Option, Router, RouterManager} from '@mo/core';
+import {Controller, Instance, Method, Module, Mo, MoBasic, Moon, Router, RouterManager, OnInit, OnStart} from '@mo/core';
 import {Injectable} from 'injection-js';
 import {ArrayType, Express, ExpressServer, GET, Params, POST, Query, ResponseHandler} from '@mo/express';
 import {ExpressDefaultPluginPackage} from '../src/index';
@@ -66,7 +66,7 @@ class IndexRouter {
 }
 
 @Injectable()
-class TestComponent extends Component {
+class TestComponent extends MoBasic implements OnInit, OnStart {
 
     constructor(public router: RouterManager) {
         super();
@@ -80,9 +80,6 @@ class TestComponent extends Component {
     onStart(): void {
         this.debug(`testing onStart...`);
 
-    }
-
-    onStop(): void {
     }
 
 }
@@ -108,13 +105,13 @@ class TestModule {
     }
 })
 class TestInstance {
-    @Option('cors-option')
+    @Moon('cors-option')
     cors: CorsOptions = {
         origin: '123'
     }
 }
 
-MoServer
+Mo
     .create(TestInstance)
     .then(value => value.startSever());
 
