@@ -7,6 +7,7 @@ import {SessionOptions} from 'express-session';
 import * as helmet from 'helmet';
 import {IHelmetConfiguration} from 'helmet';
 import {MoonOption, Plugin, PluginPackage} from '@mo/core';
+import * as e from 'express';
 
 @PluginPackage(ExpressServer)
 export class ExpressDefaultPluginPackage {
